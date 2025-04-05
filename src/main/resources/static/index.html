@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro - Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div id="login-container" class="login-container">
+    <h2>Iniciar sesión</h2>
+    <form id="login-form">
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <input type="password" id="contrasenia" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</div>
+
+<div id="topicos-container" class="topicos-container" style="display:none;">
+    <h2>Tópicos</h2>
+
+    <!-- Formulario para crear un nuevo tópico -->
+    <div id="crear-topico-container">
+        <h3>Crear nuevo tópico</h3>
+        <form id="crear-topico-form">
+            <input type="text" id="titulo" placeholder="Título" required>
+            <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+
+            <!-- Selector de curso -->
+            <label for="curso">Selecciona un curso:</label>
+            <select id="curso" required>
+                <option value="PROGRAMACION">Programación</option>
+                <option value="ADMINISTRACION_DE_PROYECTOS">Administración de Proyectos</option>
+                <option value="BASES_DE_DATOS">Bases de Datos</option>
+                <option value="INTELIGENCIA_ARTIFICIAL">Inteligencia Artificial</option>
+                <option value="ANALISIS_DE_DATOS">Análisis de Datos</option>
+                <option value="REDES">Redes</option>
+            </select>
+
+            <button type="submit">Crear Tópico</button>
+        </form>
+    </div>
+
+    <table id="tabla-topicos">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Mensaje</th>
+            <th>Fecha Creación</th>
+            <th>Autor</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="topicos-list">
+        </tbody>
+    </table>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

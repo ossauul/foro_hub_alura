@@ -25,7 +25,7 @@ public class Topico {
     private String mensaje;
     private LocalDateTime fechaCreacion;
     private Boolean status;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "autor")
     private Usuario autor;
     @Enumerated(EnumType.STRING)

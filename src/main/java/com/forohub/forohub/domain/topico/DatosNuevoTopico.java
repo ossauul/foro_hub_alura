@@ -7,5 +7,8 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
-public record DatosNuevoTopico(@NotBlank String titulo, @NotBlank String mensaje, @NotNull LocalDateTime fecha, @NotNull Usuario autor , @NotNull Curso curso ) {
+public record DatosNuevoTopico(@NotBlank String titulo,
+                               @NotBlank String mensaje, @NotNull LocalDateTime fecha, @NotNull Usuario autor ,
+                               @NotNull Curso curso ) {
+
 }

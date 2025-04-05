@@ -25,7 +25,10 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+
+    @Column(name = "correoElectronico")
     private String correoElectronico;
+
     private String contrasenia;
     private String perfil;
 

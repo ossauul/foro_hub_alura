@@ -32,16 +32,16 @@ public class TopicoController {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<DatosTopico> nuevoTopico(@RequestBody @Valid DatosNuevoTopico datos, UriComponentsBuilder uriComponentsBuilder)
-    {
-       // Topico topico = new topicoRepository.save(new Topico(datos));
-        //DatosTopico datosTopico = new DatosTopico(topico.getId(), topico.getTitulo(), topico.getMensaje(), topico.getFechaCreacion(), topico.getAutor(), topico.getCurso());
-        /*var topico =new Topico(datos);
-        topicoRepository.save(topico);
-        URI url =uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
-        return ResponseEntity.created(url).body(new DatosTopico(topico));*/
-        var response = service.controlTopico(datos);
-        return ResponseEntity.ok(response);
+        public ResponseEntity<DatosTopico> nuevoTopico(@RequestBody @Valid DatosNuevoTopico datos, UriComponentsBuilder uriComponentsBuilder)
+        {
+           // Topico topico = new topicoRepository.save(new Topico(datos));
+            //DatosTopico datosTopico = new DatosTopico(topico.getId(), topico.getTitulo(), topico.getMensaje(), topico.getFechaCreacion(), topico.getAutor(), topico.getCurso());
+            /*var topico =new Topico(datos);
+            topicoRepository.save(topico);
+            URI url =uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
+            return ResponseEntity.created(url).body(new DatosTopico(topico));*/
+            var response = service.controlTopico(datos);
+            return ResponseEntity.ok(response);
 
     }
 
